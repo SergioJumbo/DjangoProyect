@@ -1,7 +1,7 @@
 
 from django.urls import path
 
-from asistencias.views import login, logDocente, logEstudiante
+from core.asistencias.views import logDocente, logEstudiante
 urlpatterns = [
     path('docente/', logDocente),
     path('estudiante/', logEstudiante)

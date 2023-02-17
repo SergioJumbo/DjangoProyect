@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 
-from asistencias.models import Universidad
+from core.asistencias.models import Universidad
 
 def home(request):
     data = {

@@ -1,6 +1,4 @@
-from django.test import TestCase
-from app.wsgi import *
-from asistencias.models import Universidad, Facultad
+from core.asistencias.models import Facultad
 
 # query = Universidad.objects.all()
 # print(query)
