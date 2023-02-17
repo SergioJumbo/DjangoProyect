@@ -3,13 +3,18 @@ from django.http import HttpResponse, JsonResponse
 
 from asistencias.models import Universidad
 
+def home(request):
+    data = {
+        'universidad': Universidad.objects.first()
+    }
+    return render(request, 'index.html', data)
 
 def login(request):
     data = {
         'nombre':'Sergio',
         'u': Universidad.objects.all()[0].nombre
     }
-    return JsonResponse(data)
+    return render(request, 'index.html')
 
 def logDocente(request):
     data = {

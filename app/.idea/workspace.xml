@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="crear superadmin django">
-      <change afterPath="$PROJECT_DIR$/asistencias/urls.py" afterDir="false" />
+    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="crear rutas y vistas basicas">
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asistencias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/asistencias/views.py" afterDir="false" />
     </list>
@@ -22,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -43,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -119,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676594236760</updated>
       <workItem from="1676594250071" duration="2231000" />
-      <workItem from="1676596843905" duration="3647000" />
+      <workItem from="1676596843905" duration="9331000" />
     </task>
     <task id="LOCAL-00001" summary="crear superadmin django">
       <created>1676598395410</created>
@@ -128,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676598395410</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="crear rutas y vistas basicas">
+      <created>1676601544593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676601544593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +157,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="crear superadmin django" />
-    <option name="LAST_COMMIT_MESSAGE" value="crear superadmin django" />
+    <MESSAGE value="crear rutas y vistas basicas" />
+    <option name="LAST_COMMIT_MESSAGE" value="crear rutas y vistas basicas" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1676596862155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/asistencias" />
