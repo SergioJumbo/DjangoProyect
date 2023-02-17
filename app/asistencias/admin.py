@@ -1,3 +1,5 @@
 from django.contrib import admin
+from asistencias.models import *
 
-# Register your models here.
+admin.site.register(Universidad)
+admin.site.register(Facultad)
