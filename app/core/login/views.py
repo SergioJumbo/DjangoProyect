@@ -8,7 +8,7 @@ class LoginFormView(LoginView):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('home')
+            return redirect('/system/student/report/')
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):

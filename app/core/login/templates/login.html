@@ -1,20 +1,15 @@
 {% load static %}
 {% load widget_tweaks %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
-
-    <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-master/plugins/fontawesome-free/css/all.min.css' %}">
-    <!-- icheck bootstrap -->
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-master/plugins/icheck-bootstrap/icheck-bootstrap.min.csss' %}">
-    <!-- Theme style -->
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-master/dist/css/adminlte.min.css' %}">
     <script src="{% static 'lib/sweetalert2-9.10.0/sweetalert2.all.min.js' %}"></script>
 </head>
@@ -23,7 +18,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="{% static 'lib/AdminLTE-master/index2.html' %}" class="h1">Iniciar sesión</a>
+            <a href="{% static 'lib/AdminLTE-master/index2.html' %}" class="h1">{{ title}}</a>
         </div>
         <div class="card-body">
             <!--<p class="login-box-msg">Iniciar sesión</p>-->
@@ -59,15 +54,14 @@
 
                 </div>-->
                 <div class="row">
-
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
                     </div>
                 </div>
             </form>
-            <p class="mb-0">
+            <!--<p class="mb-0">
                 <a href="register.html" class="text-center">Registrarse</a>
-            </p>
+            </p>-->
         </div>
         <!-- /.card-body -->
     </div>

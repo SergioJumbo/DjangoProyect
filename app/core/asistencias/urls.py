@@ -1,8 +1,7 @@
 
 from django.urls import path
+from core.asistencias.views.reporte.view import reporte_list
 
-from core.asistencias.views import logDocente, logEstudiante
 urlpatterns = [
-    path('docente/', logDocente),
-    path('estudiante/', logEstudiante)
+    path('student/report/', reporte_list, name= 'reporte_list')
 ]

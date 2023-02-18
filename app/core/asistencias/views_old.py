@@ -11,10 +11,11 @@ def home(request):
 
 def login(request):
     data = {
+        'title' : 'Iniciar sesión',
         'nombre':'Sergio',
         'u': Universidad.objects.all()[0].nombre
     }
-    return render(request, 'index.html')
+    return render(request, 'login.html', data)
 
 def logDocente(request):
     data = {
