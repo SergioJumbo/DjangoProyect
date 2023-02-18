@@ -7,7 +7,7 @@ def home(request):
     data = {
         'universidad': Universidad.objects.first()
     }
-    return render(request, 'index.html', data)
+    return render(request, 'home.html', data)
 
 def login(request):
     data = {

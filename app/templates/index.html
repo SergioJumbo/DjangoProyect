@@ -1,36 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Iniciar sesión</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'lib/bootstrap-4.4.1-dist/css/bootstrap.min.css' %}" />
-    <script src="{% static 'lib/bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js' %}"></script>
-    <script src="{% static 'lib/bootstrap-4.4.1-dist/js/popper.min.js' %}"></script>
-    <script src="{% static 'lib/bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
-</head>
-<body>
-<h1>Sistema de Registro de Asistencias de la {{ universidad.nombre }}</h1>
-<img src="{% static 'img/unl.png' %}" class="img-fluid img-thumbnail">
-<div class=" mb-3">
-    <button >
-      <a href="{% url 'login' %}">Iniciar sesión</a>
-    </button>
-</div>
-<div class=" mb-3">
-    <button >
-      <a href="{% url 'login' %}">Registrarse</a>
-    </button>
-</div>
-<form class="row">
-    <div class="col-12 mb-3">
+{% extends 'home.html' %}
 
-        <input type="text" placeholder="Ingresar su nombre de usuario">
-    </div>
-    <div class="col-12">
-        <input type="password" placeholder="Ingresar su contraseña">
-    </div>
-</form>
-</body>
-</html>
+{% block content %}
+    <h1>hola</h1>
+{% endblock %}

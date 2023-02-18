@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="agregar recursos estaticos">
-      <change afterPath="$PROJECT_DIR$/core/asistencias/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
+    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="formulario login">
+      <change afterPath="$PROJECT_DIR$/core/usuario/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asistencias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/asistencias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/asistencias/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/asistencias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/asistencias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/DETPC/PycharmProjects/DjangoProyect/app/asistencias/tests.py",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DETPC/PycharmProjects/DjangoProyect/app/asistencias/tests.py&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\DETPC\PycharmProjects\DjangoProyect\app\core" />
@@ -137,7 +135,11 @@
       <option name="presentableId" value="Default" />
       <updated>1676594236760</updated>
       <workItem from="1676594250071" duration="2231000" />
-      <workItem from="1676596843905" duration="16066000" />
+      <workItem from="1676596843905" duration="18739000" />
+      <workItem from="1676648837093" duration="17821000" />
+      <workItem from="1676673814346" duration="393000" />
+      <workItem from="1676674246550" duration="2705000" />
+      <workItem from="1676684894194" duration="3553000" />
     </task>
     <task id="LOCAL-00001" summary="crear superadmin django">
       <created>1676598395410</created>
@@ -160,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676608246690</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="formulario login">
+      <created>1676637986379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676637986379</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +190,8 @@
     <MESSAGE value="crear superadmin django" />
     <MESSAGE value="crear rutas y vistas basicas" />
     <MESSAGE value="agregar recursos estaticos" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregar recursos estaticos" />
+    <MESSAGE value="formulario login" />
+    <option name="LAST_COMMIT_MESSAGE" value="formulario login" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1676596862155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/asistencias" />
