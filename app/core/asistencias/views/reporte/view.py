@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.utils.decorators import method_decorator
 
 from core.asistencias.forms import RegistroAsistenciaForm
@@ -53,5 +53,19 @@ class ReporteCreateView(CreateView):
         context['title'] = 'Registrar Asistencia'
         context['entity'] = 'Asistencias'
         context['list_url'] = reverse_lazy('reporteList')
+        context['action'] = 'add'
         return context
 
+class ReporteUpdateView(UpdateView):
+    model = RegistroAsistencia
+    form_class = RegistroAsistenciaForm
+    template_name ='reporte/create.html'
+    success_url =reverse_lazy('reporteList')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Editar Asistencia'
+        context['entity'] = 'Asistencias'
+        context['list_url'] = reverse_lazy('reporteList')
+        context['action'] = 'edit'
+        return context

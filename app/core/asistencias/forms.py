@@ -22,7 +22,8 @@ class RegistroAsistenciaForm(ModelForm):
             attrs={
                 'type': 'date',
                 'placeholder': 'mm-dd-yyyy'
-                }
+                },
+            format = '%Y-%m-%d'
             )
 
         }

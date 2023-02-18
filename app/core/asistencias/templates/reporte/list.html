@@ -10,14 +10,17 @@
 {% block rows %}
     {% for item in object_list %}
         <tr>
-        <td>{{ item.id }}</td>
-        <td>{{ item.asignatura.nombre }}</td>
-        <td>{{ item.fecha }}</td>
-        <td>
-            <button type="button" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></button>
-            <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i>
-            </button>
-        </td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.asignatura.nombre }}</td>
+            <td>{{ item.fecha }}</td>
+            <td>
+                <a href="{% url 'reporteUpdate' item.id %}" class="btn btn-warning btn-xs">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <button type="button" class="btn btn-danger btn-xs">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
         </tr>
 
     {% endfor %}
