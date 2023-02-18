@@ -23,6 +23,6 @@ urlpatterns = [
     path('', LoginFormView.as_view()),
     path('admin/', admin.site.urls, name='admin'),
     path('system/', include('core.asistencias.urls'), name='system'),
-    path('login/', LoginFormView.as_view(), name='login')
+    path('login/', include('core.login.urls'))
 
 ]
