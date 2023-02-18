@@ -17,9 +17,9 @@
                 <a href="{% url 'reporteUpdate' item.id %}" class="btn btn-warning btn-xs">
                     <i class="fas fa-edit"></i>
                 </a>
-                <button type="button" class="btn btn-danger btn-xs">
+                <a  href="{% url 'reporteDelete' item.id %}"  class="btn btn-danger btn-xs">
                     <i class="fas fa-trash-alt"></i>
-                </button>
+                </a>
             </td>
         </tr>
 
