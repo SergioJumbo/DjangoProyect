@@ -1,33 +1,25 @@
-{% extends 'body.html' %}
-{% block content %}
-    <div class="card card-default">
-        <div class="card-header">
-            <h3 class="card-title">
-                <i class="fas fa-exclamation-triangle"></i>
-                {{ title }}
-            </h3>
-        </div>
-    <div class="card-body">
-        <table class="table">
-  <thead>
+{% extends 'list.html' %}
+{% block columns %}
     <tr>
-      <th scope="col">Nro</th>
-      <th scope="col">Asignatura</th>
-      <th scope="col">Fecha de asistencia</th>
+        <th scope="col" style="width: 10%">Nro</th>
+        <th scope="col" style="width: 40%">Asignatura</th>
+        <th scope="col" style="width: 40%">Fecha de asistencia</th>
+        <th scope="col" style="width: 10%">Acciones</th>
     </tr>
-  </thead>
-  <tbody>
-  {% for item in reporte %}
-<tr>
-      <td>{{ item.id }}</td>
-      <td>{{ item.asignatura.nombre }}</td>
-      <td>{{ item.fecha }}</td>
-    </tr>
-  {% endfor %}
+{% endblock %}
+{% block rows %}
+    {% for item in object_list %}
+        <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.asignatura.nombre }}</td>
+        <td>{{ item.fecha }}</td>
+        <td>
+            <button type="button" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i>
+            </button>
+        </td>
+        </tr>
 
+    {% endfor %}
 
-  </tbody>
-</table>
-    </div>
-    </div>
 {% endblock %}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import model_to_dict
 
 from app import settings
 
@@ -134,6 +135,10 @@ class RegistroAsistencia(models.Model):
 
     def __str__(self):
         return str(self.fecha)
+    def toJSON(self):
+        item = model_to_dict(self)
+        model_to_dict
+        return item
 
     class Meta:
         db_table = 'RegistroAsistencias'
