@@ -7,7 +7,8 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from core.asistencias.forms import RegistroAsistenciaForm
-from core.asistencias.models import RegistroAsistencia
+from core.asistencias.models import RegistroAsistencia, Estudiante
+from core.usuario.models import Usuario
 
 
 # def reporte_list(request):
@@ -35,7 +36,8 @@ class ReporteListView(ListView):
 
         return JsonResponse(data)
     def get_queryset(self):
-        return RegistroAsistencia.objects.filter(estudiante_id=self.request.user.id)
+        estudiante = Estudiante.objects.get(usuario_id=self.request.user.id)
+        return RegistroAsistencia.objects.filter(estudiante_id=estudiante.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -53,12 +55,6 @@ class ReporteCreateView(CreateView):
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        print(request)
-        #if request.user.is_authenticated():
-        # get user id
-        # user_id = request.user.id
-        # print(user_id)
-        # form = RegistroAsistenciaForm(user_id=user_id)
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -73,7 +69,9 @@ class ReporteCreateView(CreateView):
         # Sending user object to the form, to verify which fields to display/remove (depending on group)
     def get_form_kwargs(self):
         kwargs = super(ReporteCreateView, self).get_form_kwargs()
-        kwargs.update({'user': self.request.user})
+        user = self.request.user
+        estudiante = Estudiante.objects.get(usuario_id=user.id)
+        kwargs.update({'estudiante': estudiante})
         return kwargs
 
 class ReporteUpdateView(UpdateView):
@@ -93,6 +91,13 @@ class ReporteUpdateView(UpdateView):
         context['list_url'] = reverse_lazy('reporteList')
         context['action'] = 'edit'
         return context
+
+    # def get_form_kwargs(self):
+    #     kwargs = super(ReporteCreateView, self).get_form_kwargs()
+    #     user = self.request.user
+    #     estudiante = Estudiante.objects.get(usuario_id=user.id)
+    #     kwargs.update({'estudiante': estudiante})
+    #     return kwargs
 
 class ReporteDeleteView(DeleteView):
     model = RegistroAsistencia

@@ -115,7 +115,7 @@ class Asignatura(models.Model):
 class Estudiante(Persona):
     id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False)
     asignatura = models.ManyToManyField(Asignatura)
-    usuario = models.OneToOneField(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.RESTRICT)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.RESTRICT)
 
     def __str__(self):
         return self.nombre
