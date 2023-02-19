@@ -2,6 +2,7 @@
 {% block columns %}
     <tr>
         <th scope="col" style="width: 10%">Nro</th>
+        <th scope="col" style="width: 40%">Docente</th>
         <th scope="col" style="width: 40%">Asignatura</th>
         <th scope="col" style="width: 40%">Fecha de asistencia</th>
         <th scope="col" style="width: 10%">Acciones</th>
@@ -11,6 +12,7 @@
     {% for item in object_list %}
         <tr>
             <td>{{ item.id }}</td>
+            <td>{{ item.asignatura.docente.nombre }}</td>
             <td>{{ item.asignatura.nombre }}</td>
             <td>{{ item.fecha }}</td>
             <td>

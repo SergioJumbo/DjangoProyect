@@ -27,6 +27,7 @@ class ReporteListView(ListView):
 
     def post(self, request, *args, **kwargs):
         data = {}
+
         try:
             data = RegistroAsistencia.objects.get(pk=request.POST['id']).toJSON()
         except Exception as e:
@@ -34,7 +35,7 @@ class ReporteListView(ListView):
 
         return JsonResponse(data)
     def get_queryset(self):
-        return RegistroAsistencia.objects.all()
+        return RegistroAsistencia.objects.filter(estudiante_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -52,6 +53,12 @@ class ReporteCreateView(CreateView):
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
+        print(request)
+        #if request.user.is_authenticated():
+        # get user id
+        # user_id = request.user.id
+        # print(user_id)
+        # form = RegistroAsistenciaForm(user_id=user_id)
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -60,7 +67,14 @@ class ReporteCreateView(CreateView):
         context['entity'] = 'Asistencias'
         context['list_url'] = reverse_lazy('reporteList')
         context['action'] = 'add'
+
         return context
+
+        # Sending user object to the form, to verify which fields to display/remove (depending on group)
+    def get_form_kwargs(self):
+        kwargs = super(ReporteCreateView, self).get_form_kwargs()
+        kwargs.update({'user': self.request.user})
+        return kwargs
 
 class ReporteUpdateView(UpdateView):
     model = RegistroAsistencia
