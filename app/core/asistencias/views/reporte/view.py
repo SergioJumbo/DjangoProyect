@@ -7,7 +7,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from core.asistencias.forms import RegistroAsistenciaForm
-from core.asistencias.models import RegistroAsistencia, Estudiante
+from core.asistencias.models import RegistroAsistencia, Estudiante, Asignatura
 from core.usuario.models import Usuario
 
 
@@ -45,10 +45,16 @@ class ReporteListView(ListView):
         context['create_url'] = reverse_lazy('reporteCreate')
         context['list_url'] = reverse_lazy('reporteList')
         context['entity'] = 'Asistencias'
+        estudiante = Estudiante.objects.get(usuario_id=self.request.user.id)
+        estudiante_asignatura = estudiante.asignatura.through
+        asignatura = estudiante_asignatura.objects.get(estudiante_id=estudiante.id).asignatura
+        context['subtitle']='Información del estudiante '
+        context['estudiante'] = estudiante
+        context['asignatura'] = asignatura
         return context
 
 class ReporteCreateView(CreateView):
-    model= RegistroAsistencia
+    model = RegistroAsistencia
     form_class = RegistroAsistenciaForm
     template_name = 'reporte/create.html'
     success_url = reverse_lazy('reporteList')

@@ -1,4 +1,19 @@
 {% extends 'list.html' %}
+{% block infoPersonal %}
+
+    <div class="card-header">
+        {{ subtitle }} {{ estudiante.nombre }}
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0 mt-1">
+            <p>{{ asignatura.ciclo.carrera.facultad.universidad.nombre }}, Facultad {{ asignatura.ciclo.carrera.facultad.nombre }}</p>
+            <footer class="blockquote-footer">{{ asignatura.ciclo.carrera.nombre }}, <cite title="Source Title">Ciclo {{ asignatura.ciclo.numero }}</cite>
+            </footer>
+            <footer class="blockquote-footer"> Matriculado en el periodo {{ asignatura.ciclo.matricula.fechaInicio|date:"d M, Y"  }} - {{ asignatura.ciclo.matricula.fechaFin|date:"d M, Y"  }}
+            </footer>
+        </blockquote>
+    </div>
+{% endblock %}
 {% block columns %}
     <tr>
         <th scope="col" style="width: 10%">Nro</th>
@@ -19,7 +34,7 @@
                 <a href="{% url 'reporteUpdate' item.id %}" class="btn btn-warning btn-xs">
                     <i class="fas fa-edit"></i>
                 </a>
-                <a  href="{% url 'reporteDelete' item.id %}"  class="btn btn-danger btn-xs">
+                <a href="{% url 'reporteDelete' item.id %}" class="btn btn-danger btn-xs">
                     <i class="fas fa-trash-alt"></i>
                 </a>
             </td>
