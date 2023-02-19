@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -20,6 +21,7 @@ class ReporteListView(ListView):
     model = RegistroAsistencia
     template_name = 'reporte/list.html'
     @method_decorator(csrf_exempt)
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -48,6 +50,10 @@ class ReporteCreateView(CreateView):
     template_name = 'reporte/create.html'
     success_url = reverse_lazy('reporteList')
 
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Registrar Asistencia'
@@ -62,6 +68,10 @@ class ReporteUpdateView(UpdateView):
     template_name ='reporte/create.html'
     success_url =reverse_lazy('reporteList')
 
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Editar Asistencia'
@@ -74,6 +84,10 @@ class ReporteDeleteView(DeleteView):
     model = RegistroAsistencia
     template_name ='reporte/delete.html'
     success_url =reverse_lazy('reporteList')
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

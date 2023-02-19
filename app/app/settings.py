@@ -142,3 +142,5 @@ LOGIN_REDIRECT_URL = '/system/student/report/'
 AUTH_USER_MODEL = 'usuario.Usuario'
 
 LOGOUT_REDIRECT_URL = '/login/'
+
+LOGIN_URL = '/login/'
