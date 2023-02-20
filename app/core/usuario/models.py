@@ -19,7 +19,7 @@ class Usuario(AbstractUser):
     #     return '{}{}'.format(STATIC_URL, 'img/empty.png')
 
     class Meta:
-        db_table = 'Usuarios'
+        db_table = 'usuarios'
         verbose_name = 'Usuario'
         verbose_name_plural = 'Usuarios'
         ordering = ['id']

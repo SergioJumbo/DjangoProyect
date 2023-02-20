@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="mostrar asistencias segun estudiante logueado">
+    <list default="true" id="956800dc-3e68-468c-b62a-7aea7313aae4" name="Changes" comment="mostrar informacion personal de estudiante">
+      <change afterPath="$PROJECT_DIR$/core/asistencias/migrations/0007_alter_asignatura_table_alter_carrera_table_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/asistencias/migrations/0008_alter_registroasistencia_table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/asistencias/templates/reporte/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/templates/reporte/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/asistencias/views/reporte/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/views/reporte/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/asistencias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/asistencias/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/usuario/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/usuario/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature_" />
+        <entry key="$PROJECT_DIR$/.." value="release" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -131,6 +132,7 @@
       <workItem from="1676673814346" duration="393000" />
       <workItem from="1676674246550" duration="2705000" />
       <workItem from="1676684894194" duration="68894000" />
+      <workItem from="1676922130798" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="crear superadmin django">
       <created>1676598395410</created>

@@ -15,7 +15,7 @@ class Universidad(models.Model):
         return self.nombre
 
     class Meta:
-        db_table='Universidades'
+        db_table='universidades'
         verbose_name='Universidad'
         verbose_name_plural='Universidades'
         ordering=['id']
@@ -29,7 +29,7 @@ class Facultad(models.Model):
         return self.nombre
 
     class Meta:
-        db_table = 'Facultades'
+        db_table = 'facultades'
         verbose_name = 'Facultad'
         verbose_name_plural = 'Facultades'
         ordering = ['id']
@@ -43,7 +43,7 @@ class Carrera(models.Model):
         return self.nombre
 
     class Meta:
-        db_table = 'Carreras'
+        db_table = 'carreras'
         verbose_name = 'Carrera'
         verbose_name_plural = 'Carreras'
         ordering = ['id']
@@ -58,7 +58,7 @@ class Matricula(models.Model):
         return str(self.fechaInicio)
 
     class Meta:
-        db_table = 'Matriculas'
+        db_table = 'matriculas'
         verbose_name = 'Matricula'
         verbose_name_plural = 'Matriculas'
         ordering = ['id']
@@ -73,7 +73,7 @@ class Ciclo(models.Model):
         return str(self.numero)
 
     class Meta:
-        db_table = 'Ciclos'
+        db_table = 'ciclos'
         verbose_name = 'Ciclo'
         verbose_name_plural = 'Ciclos'
         ordering = ['id']
@@ -92,7 +92,7 @@ class Docente(Persona):
         return self.nombre
 
     class Meta:
-        db_table = 'Docentes'
+        db_table = 'docentes'
         verbose_name = 'Docente'
         verbose_name_plural = 'Docentes'
         ordering = ['id']
@@ -107,7 +107,7 @@ class Asignatura(models.Model):
         return self.nombre
 
     class Meta:
-        db_table = 'Asignaturas'
+        db_table = 'asignaturas'
         verbose_name = 'Asignatura'
         verbose_name_plural = 'Asignaturas'
         ordering = ['id']
@@ -121,7 +121,7 @@ class Estudiante(Persona):
         return self.nombre
 
     class Meta:
-        db_table = 'Estudiantes'
+        db_table = 'estudiantes'
         verbose_name = 'Estudiante'
         verbose_name_plural = 'Estudiantes'
         ordering = ['id']
@@ -141,7 +141,7 @@ class RegistroAsistencia(models.Model):
         return item
 
     class Meta:
-        db_table = 'RegistroAsistencias'
+        db_table = 'registroasistencias'
         verbose_name = 'RegistroAsistencia'
         verbose_name_plural = 'RegistroAsistencias'
         ordering = ['id']
